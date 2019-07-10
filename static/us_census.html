@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>USA Map Example</title>
+    <script src="mapdata.js"></script>
+    <script src="usmap.js"></script>
+    <style>
+        table, th, td {
+          border: solid black;
+        }
+        </style>
+  </head>
+  <body>
+  <h1 align="center">USA Population</h1>
+    <div id="map"></div>
+    
+    
+      <p>
+          <table align="center">
+              <tr>
+                <th>State</th>
+                <th>Population in 2010</th>
+                <th>Population in 2018</th>
+                <th>Growth Rate</th>
+              </tr>
+              <tr>
+                <td>Alabama</td>
+                <td align="center">4,779,736</td>
+                <td align="center">4,864,745</td>
+                <td align="center">1.78</td>
+              </tr>
+              <tr>
+                  <td>Alaska</td>
+                  <td align="center">713,906</td>
+                  <td align="center">737,438</td>
+                  <td align="center">3.30</td>
+                </tr>
+                <tr>
+                    <td>Arizona</td>
+                    <td align="center">6,407,774</td>
+                    <td align="center">7,171,646</td>
+                    <td align="center">11.92</td>
+                  </tr>
+                <tr>
+                    <td>Arkansas</td>
+                    <td align="center">2,921,978</td>
+                    <td align="center">3,013,825</td>
+                    <td align="center">3.14</td>
+                 </tr>
+                 <tr>
+                     <td>California</td>
+                     <td align="center">37,320,903</td>
+                     <td align="center">39,557,045</td>
+                     <td align="center">5.99</td>
+                  </tr>
+                  <tr>
+                     <td>Colorado</td>
+                     <td align="center">5,048,281</td>
+                     <td align="center">5,695,564</td>
+                     <td align="center">12.82</td>
+                   </tr>
+                   <tr>
+                      <td>Connecticut</td>
+                      <td align="center">3,579,125</td>
+                      <td align="center">3,572,665</td>
+                      <td align="center">-0.18</td>
+                    </tr>
+                    <tr>
+                       <td>Delaware</td>
+                       <td align="center">899,595</td>
+                       <td align="center">967,171</td>
+                       <td align="center">7.51</td>
+                     </tr>
+                     <tr>
+                        <td>Districy of Columbia</td>
+                        <td align="center">605,085</td>
+                        <td align="center">702,455</td>
+                        <td align="center">16.09</td>
+                      </tr>
+                      <tr>
+                        <td>Florida</td>
+                        <td align="center">18,845,785</td>
+                        <td align="center">21,299,325</td>
+                        <td align="center">13.02</td>
+                       </tr>
+                       <tr>
+                          <td>Georgia</td>
+                          <td align="center">9,711,810</td>
+                          <td align="center">10,519,475</td>
+                          <td align="center">8.32</td>
+                        </tr>
+                                  <tr>
+                                      <td>Hawaii</td>
+                                      <td align="center">1,363,963</td>
+                                      <td align="center">1,420,491</td>
+                                      <td align="center">4.14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Idaho</td>
+                                        <td align="center">1,570,773</td>
+                                        <td align="center">1,754,208</td>
+                                        <td align="center">11.68</td>
+                                      </tr>
+                                      <tr>
+                                          <td>Illinois</td>
+                                          <td align="center">12,840,762</td>
+                                          <td align="center">12,741,080</td>
+                                          <td align="center">-0.78</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Indiana</td>
+                                            <td align="center">6,490,436</td>
+                                            <td align="center">6,691,878</td>
+                                            <td align="center">3.10</td>
+                                          </tr>
+                                          <tr>
+                                              <td>Iowa</td>
+                                              <td align="center">3,050,767</td>
+                                              <td align="center">3,156,145</td>
+                                              <td align="center">3.45</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Kansas</td>
+                                                <td align="center">2,858,213</td>
+                                                <td align="center">2,911,505</td>
+                                                <td align="center">1.87</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>Kentucky</td>
+                                                  <td align="center">4,348,200</td>
+                                                  <td align="center">4,468,402</td>
+                                                  <td align="center">2.77</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Louisiana</td>
+                                                    <td align="center">4,544,532</td>
+                                                    <td align="center">4,659,978</td>
+                                                    <td align="center">2.54</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>Maine</td>
+                                                      <td align="center">1,327,632</td>
+                                                      <td align="center">1,338,404</td>
+                                                      <td align="center">0.81</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Maryland</td>
+                                                        <td align="center">5,788,642</td>
+                                                        <td align="center">6,042,718</td>
+                                                        <td align="center">4.39</td>
+                                                      </tr>
+                                                      <tr>
+                                                          <td>Massachusetts</td>
+                                                          <td align="center">6,566,431</td>
+                                                          <td align="center">6,902,149</td>
+                                                          <td align="center">5.11</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Michigan</td>
+                                                            <td align="center">9,877,535</td>
+                                                            <td align="center">9,995,915</td>
+                                                            <td align="center">1.19</td>
+                                                          </tr>
+                                                          <tr>
+                                                              <td>Minnesota</td>
+                                                              <td align="center">5,310,843</td>
+                                                              <td align="center">5,611,179</td>
+                                                              <td align="center">5.66</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>Mississippi</td>
+                                                                <td align="center">2,970,536</td>
+                                                                <td align="center">2,986,530</td>
+                                                                <td align="center">0.54</td>
+                                                              </tr>
+                                                              <tr>
+                                                                  <td>Missouri</td>
+                                                                  <td align="center">5,995,976</td>
+                                                                  <td align="center">6,126,452</td>
+                                                                  <td align="center">2.17</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Montana</td>
+                                                                    <td align="center">990,722</td>
+                                                                    <td align="center">1,062,305</td>
+                                                                    <td align="center">7.23</td>
+                                                                  </tr>
+                                                                  <tr>
+                                                                      <td>Nebraska</td>
+                                                                      <td align="center">1,829,536</td>
+                                                                      <td align="center">1,929,268</td>
+                                                                      <td align="center">5.45</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Nevada</td>
+                                                                        <td align="center">2,702,464</td>
+                                                                        <td align="center">3,034,392</td>
+                                                                        <td align="center">12.28</td>
+                                                                      </tr>
+                                                                      <tr>
+                                                                          <td>New Hampshire</td>
+                                                                          <td align="center">1,316,777</td>
+                                                                          <td align="center">1,356,458</td>
+                                                                          <td align="center">3.01</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>New Jersey</td>
+                                                                            <td align="center">8,799,624</td>
+                                                                            <td align="center">8,908,520</td>
+                                                                            <td align="center">1.24</td>
+                                                                          </tr>
+                                                                          <tr>
+                                                                              <td>New Mexico</td>
+                                                                              <td align="center">2,064,588</td>
+                                                                              <td align="center">2,095,428</td>
+                                                                              <td align="center">1.49</td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>New York</td>
+                                                                                <td align="center">19,400,080</td>
+                                                                                <td align="center">19,542,209</td>
+                                                                                <td align="center">0.73</td>
+                                                                              </tr>
+                                                                              <tr>
+                                                                                  <td>North Carolina</td>
+                                                                                  <td align="center">9,574,293</td>
+                                                                                  <td align="center">10,383,620</td>
+                                                                                  <td align="center">8.45</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>North Dakota</td>
+                                                                                    <td align="center">674,710</td>
+                                                                                    <td align="center">760,077</td>
+                                                                                    <td align="center">12.65</td>
+                                                                                  </tr>
+                                                                                  <tr>
+                                                                                      <td>Ohio</td>
+                                                                                      <td align="center">11,539,327</td>
+                                                                                      <td align="center">11,689,442</td>
+                                                                                      <td align="center">1.30</td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>Oklahoma</td>
+                                                                                        <td align="center">3,759,632</td>
+                                                                                        <td align="center">3,943,079</td>
+                                                                                        <td align="center">4.88</td>
+                                                                                      </tr>
+                                                                                      <tr>
+                                                                                          <td>Oregon</td>
+                                                                                          <td align="center">3,837,532</td>
+                                                                                          <td align="center">4,190,713</td>
+                                                                                          <td align="center">9.20</td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>Pennsylvania</td>
+                                                                                            <td align="center">12,711,158</td>
+                                                                                            <td align="center">12,807,060</td>
+                                                                                            <td align="center">0.75</td>
+                                                                                          </tr>
+                                                                                          <tr>
+                                                                                              <td>Rhode Island</td>
+                                                                                              <td align="center">1,053,938</td>
+                                                                                              <td align="center">1,057,315</td>
+                                                                                              <td align="center">0.32</td>
+                                                                                            </tr>
+                                                                                            <tr>
+                                                                                                <td>South Carolina</td>
+                                                                                                <td align="center">4,635,656</td>
+                                                                                                <td align="center">5,084,127</td>
+                                                                                                <td align="center">9.67</td>
+                                                                                              </tr>
+                                                                                              <tr>
+                                                                                                  <td>South Dakota</td>
+                                                                                                  <td align="center">816,165</td>
+                                                                                                  <td align="center">882,235</td>
+                                                                                                  <td align="center">8.09</td>
+                                                                                                </tr>
+                                                                                                <tr>
+                                                                                                    <td>Tennessee</td>
+                                                                                                    <td align="center">6,355,301</td>
+                                                                                                    <td align="center">6,770,010</td>
+                                                                                                    <td align="center">6.53</td>
+                                                                                                  </tr>
+                                                                                                  <tr>
+                                                                                                      <td>Texas</td>
+                                                                                                      <td align="center">25,242,679</td>
+                                                                                                      <td align="center">28,701,845</td>
+                                                                                                      <td align="center">13.70</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>Utah</td>
+                                                                                                        <td align="center">2,775,334</td>
+                                                                                                        <td align="center">3,161,105</td>
+                                                                                                        <td align="center">13.90</td>
+                                                                                                      </tr>
+                                                                                                      <tr>
+                                                                                                          <td>Vermont</td>
+                                                                                                          <td align="center">625,880</td>
+                                                                                                          <td align="center">626,299</td>
+                                                                                                          <td align="center">0.07</td>
+                                                                                                        </tr>
+                                                                                                        <tr>
+                                                                                                            <td>Virginia</td>
+                                                                                                            <td align="center">8,023,680</td>
+                                                                                                            <td align="center">8,517,685</td>
+                                                                                                            <td align="center">6.16</td>
+                                                                                                          </tr>
+                                                                                                          <tr>
+                                                                                                              <td>Washington</td>
+                                                                                                              <td align="center">6,742,902</td>
+                                                                                                              <td align="center">7,535,591</td>
+                                                                                                              <td align="center">11.75</td>
+                                                                                                            </tr>
+                                                                                                            <tr>
+                                                                                                                <td>West Virginia</td>
+                                                                                                                <td align="center">1,854,214</td>
+                                                                                                                <td align="center">1,805,832</td>
+                                                                                                                <td align="center">-2.61</td>
+                                                                                                              </tr>
+                                                                                                              <tr>
+                                                                                                                  <td>Wisconsin</td>
+                                                                                                                  <td align="center">5,690,479</td>
+                                                                                                                  <td align="center">5,813,568</td>
+                                                                                                                  <td align="center">2.16</td>
+                                                                                                                </tr>
+                                                                                                                <tr>
+                                                                                                                    <td>Wyoming</td>
+                                                                                                                    <td align="center">564,483</td>
+                                                                                                                    <td align="center">577,737</td>
+                                                                                                                    <td align="center">2.35</td>
+                                                                                                                  </tr>
+
+            </table>
+	</body>
+</html>
+      
+    
+

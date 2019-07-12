@@ -1,31 +1,22 @@
-<<<<<<< HEAD
-from flask import Flask, redirect, render_template, url_for
+from flask import Flask, redirect, render_template
 
-app = Flask(__name__, template_folder='C:/Users/krish/Desktop/web_graphics/templates', static_folder='C:/Users/krish/Desktop/web_graphics/static')
-app.config['DEBUG'] = True
-@app.route("/")
-def examples():
-    return render_template("examples.html")
+import get_data
 
-=======
-from flask import Flask, redirect, render_template, url_for
+app = Flask(__name__)
 
-app = Flask(__name__, template_folder='C:/Users/krish/Desktop/web_graphics/templates', static_folder='C:/Users/krish/Desktop/web_graphics/static')
-app.config['DEBUG'] = True
-@app.route("/")
-def examples():
-    return render_template("examples.html")
-
->>>>>>> test
-app.run(debug=True, port=5000)
-
-from flask import FLas, redirect, template
-
-
-
-
-
+@app.route('/')
+def index():
+    return redirect("/static/examples.html")
 
 @app.route("/demo")
 def demo():
-    return("render_template("demo,hello"))
+    return(render_template("demo.html",name="Demonstratio",n=12))
+
+@app.route("/anon")
+def anon():
+    return(render_template("demo.html", name=None, n=0))
+
+@app.route("/map")
+def get_map():
+    growth = get_data.get_growth_table()
+    return(render_template("map.html", growth=growth))

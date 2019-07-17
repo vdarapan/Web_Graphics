@@ -19,4 +19,8 @@ def anon():
 @app.route("/map")
 def get_map():
     growth = get_data.get_growth_table()
+<<<<<<< HEAD
     return(render_template("map.html", growth=growth))
+=======
+    return(render_template("map.html", growth=growth))
+>>>>>>> 4bcd7c09ac60f0e3d6b4365484bb4ac9741f2d29
